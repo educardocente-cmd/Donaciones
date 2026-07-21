@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Seguimiento de Donaciones</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <h1>SEGUIMIENTO DE CAMPAÑA DE DONACIONES</h1>
+
+    <div class="kpis-container">
+        <div class="kpi-card info">
+            <h3>Total Objetivo</h3>
+            <div class="valor" id="total">52</div>
+            <div class="detalle">Meta global de donaciones</div>
+        </div>
+        <div class="kpi-card exito">
+            <h3>Donaciones Realizadas</h3>
+            <div class="valor" id="realizadas">27</div>
+            <div class="detalle" id="porc-realizadas"></div>
+        </div>
+        <div class="kpi-card aviso">
+            <h3>Donaciones Restantes</h3>
+            <div class="valor" id="restantes">25</div>
+            <div class="detalle" id="porc-restantes"></div>
+        </div>
+        <div class="kpi-card exito">
+            <h3>Meta Parcial (Ene-Jun)</h3>
+            <div class="valor">CUMPLIDA</div>
+            <div class="detalle">27 donaciones solicitadas</div>
+        </div>
+        <div class="kpi-card info">
+            <h3>Etapa Actual</h3>
+            <div class="valor">Julio</div>
+            <div class="detalle">Informe + Asignacion</div>
+        </div>
+        <div class="kpi-card info">
+            <h3>Avance Total</h3>
+            <div class="valor" id="avance-total"></div>
+            <div class="detalle">Porcentaje completado</div>
+        </div>
+    </div>
+
+    <div class="gantt-container">
+        <h2>Cronograma de Actividades</h2>
+        <div class="gantt-escala">
+            <div></div>
+            <div>ENE</div><div>FEB</div><div>MAR</div><div>ABR</div><div>MAY</div><div>JUN</div>
+            <div>JUL</div><div>AGO</div><div>SEP</div><div>OCT</div><div>NOV</div><div>DIC</div>
+        </div>
+        <div class="gantt-fila">
+            <div class="gantt-nombre">Solicitud de Donaciones</div>
+            <div class="gantt-barra completado" style="grid-column: 2 / span 6;">27 Donaciones</div>
+        </div>
+        <div class="gantt-fila">
+            <div class="gantt-nombre">Informe Final</div>
+            <div class="gantt-barra encurso" style="grid-column: 8 / span 1;">Entrega</div>
+        </div>
+        <div class="gantt-fila">
+            <div class="gantt-nombre">Asignacion Recursos</div>
+            <div class="gantt-barra encurso" style="grid-column: 8 / span 1;">Cemento / Proyecto Patos</div>
+        </div>
+        <div class="gantt-fila">
+            <div class="gantt-nombre">Ejecucion Entregas</div>
+            <div class="gantt-barra pendiente" style="grid-column: 9 / span 1;">Realizacion</div>
+        </div>
+        <div class="leyenda">
+            <div class="leyenda-item"><span class="leyenda-color completado"></span> Completado</div>
+            <div class="leyenda-item"><span class="leyenda-color encurso"></span> En curso</div>
+            <div class="leyenda-item"><span class="leyenda-color pendiente"></span> Pendiente</div>
+        </div>
+    </div>
+
+    <script src="js/logica.js"></script>
+</body>
+</html>
